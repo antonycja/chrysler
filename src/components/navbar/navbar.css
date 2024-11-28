@@ -1,0 +1,30 @@
+.nav-container li {
+  list-style: none;
+  text-transform: uppercase;
+  font-family: var(--font-manrope);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 10%;
+}
+
+.nav-btn {
+    text-transform: uppercase;
+    font-family: var(--font-rexton);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: transparent; /* Makes the text transparent */
+    background: var(--color-gradient-blue); /* Apply the gradient as background */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Ensures text appears with the gradient */
+    background-color: var(--color-bg-white);
+    padding: 0.8rem 1.2rem;
+    border-radius: 3rem;
+    height: max-content;
+    /* border: 1px solid red; */
+  }
+  

@@ -1,16 +1,61 @@
+import { Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/navbar/navbar";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-manrope',
+  display: 'swap',
+})
+
+const rexton = localFont({
+  display: 'swap',
+  variable: '--font-rexton',
+  src: [
+    {
+      path: './fonts/Rexton Light.otf',
+      weight: '200',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Rexton Medium.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Rexton Regular.otf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Rexton Black.otf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Rexton Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Rexton Extra Bold.otf',
+      weight: '800',
+      style: 'normal',
+    },
+  ],
+})
+
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
 
 export const metadata = {
   title: "Create Next App",
@@ -20,8 +65,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body className={`${rexton.variable} ${manrope.variable}`}>
+        {/* <body> */}
+        <Navbar />
+        <main className="main-content">
+          {children}
+        </main>
       </body>
     </html>
   );
