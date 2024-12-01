@@ -1,30 +1,184 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10% 1.5rem;
+  position: relative;
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nav-logo img {
+  max-height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
 .nav-container li {
   list-style: none;
   text-transform: uppercase;
   font-family: var(--font-manrope);
   font-weight: bold;
   font-size: 1rem;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 3rem 10%;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .nav-btn {
-    text-transform: uppercase;
-    font-family: var(--font-rexton);
-    font-weight: 700;
-    font-size: 0.85rem;
-    color: transparent; /* Makes the text transparent */
-    background: var(--color-gradient-blue); /* Apply the gradient as background */
-    -webkit-background-clip: text; /* Clip the gradient to the text */
-    -webkit-text-fill-color: transparent; /* Ensures text appears with the gradient */
-    background-color: var(--color-bg-white);
-    padding: 0.8rem 1.2rem;
-    border-radius: 3rem;
-    height: max-content;
-    /* border: 1px solid red; */
+  text-transform: uppercase;
+  font-family: var(--font-rexton);
+  font-weight: 700;
+  font-size: 0.85rem;
+  position: relative;
+  z-index: 1;
+  padding: 0.8rem 1.2rem;
+  border-radius: 3rem;
+  height: max-content;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  /* Gradient Text */
+  background: var(--color-gradient-blue);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+}
+
+.nav-btn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    var(--color-light-blue),
+    var(--color-gradient-blue-end, #007bff)
+  );
+  border-radius: 3rem;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-btn:hover {
+  /* Ensure text remains visible on hover */
+  background: var(--color-gradient-blue);
+  -webkit-background-clip: text;
+  color: var(--color-bg-white);
+  background-clip: text;
+}
+
+.nav-btn:hover::before {
+  opacity: 1;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.hamburger-line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-gradient-blue-end, #007bff);
+  margin: 4px 0;
+  transition: 0.4s;
+}
+.mobile-btn {
+    display: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-container {
+    padding: 1rem 5%;
+    position: relative;
   }
-  
+
+  .nav-logo {
+    align-items: center;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    order: 2;
+    /* margin-left: auto; */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: var(--color-bg-white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-btn {
+    /* width: 90%; */
+    text-align: center;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .nav-container li {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hamburger Menu Animation */
+  .hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 10px);
+  }
+
+  .hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -10px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-container {
+    padding: 1rem 5%;
+  }
+  .nav-container li {
+    padding: 0rem 1rem;
+  }
+  .nav-links {
+    gap: 0.75rem;
+  }
+  .mobile-btn {
+    display: block;
+  }
+}
