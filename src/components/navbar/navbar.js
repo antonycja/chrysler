@@ -6,17 +6,32 @@ import Data from "@/constants/data"
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
-    // Prevent body scroll when menu is open
+    // Handle scroll event to change navbar background
     useEffect(() => {
+        const handleScroll = () => {
+            // Change state when user scrolls down more than 50 pixels
+            if (window.scrollY > 200) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Prevent body scroll when menu is open
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'unset';
         }
 
-        // Cleanup
+        // Cleanup event listeners
         return () => {
+            window.removeEventListener('scroll', handleScroll);
             document.body.style.overflow = 'unset';
         };
     }, [isMenuOpen]);
@@ -26,12 +41,10 @@ export default function Navbar() {
     }
 
     return (
-        <nav className="nav-container">
+        <nav className={`nav-container ${scrolled ? 'scrolled' : ''}`}>
             <div className="nav-logo">
                 <Image src={Data.navbar.logo} alt="navigation logo" />
             </div>
-
-
 
             <div
                 className={`hamburger-menu ${isMenuOpen ? 'active' : ''}`}
@@ -52,7 +65,6 @@ export default function Navbar() {
                         {link}
                     </li>
                 ))}
-
             </ul>
             <div
                 className="nav-btn btn"
@@ -60,7 +72,6 @@ export default function Navbar() {
             >
                 {Data.navbar.navBtn}
             </div>
-
         </nav>
     )
 }

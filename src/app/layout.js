@@ -30,7 +30,7 @@ const rexton = localFont({
     },
     {
       path: './fonts/Rexton Black.otf',
-      weight: '600',
+      weight: '800',
       style: 'normal',
     },
     {
