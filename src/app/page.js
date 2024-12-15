@@ -8,7 +8,7 @@ export default function Home() {
       <Hero />
       <div className="hero-about"></div>
       <About />
-      <Services />
+      <Services services={[]}/>
       <h1>hello world from Home</h1>
     </>
   );

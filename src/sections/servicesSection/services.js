@@ -4,7 +4,7 @@ import Card from "@/components/card/card";
 import "./services.css";
 import Modal from "@/components/modal/modal";
 
-export default function Services({ projects }) {
+export default function Services({ services }) {
     // Track the index of the currently open card
     const [selectedServiceIndex, setSelectedServiceIndex] = useState(null);
 
@@ -22,15 +22,15 @@ export default function Services({ projects }) {
 
     return (
         <div className="card-list">
-            {projects.map((project, index) => (
+            {services.map((service, index) => (
                 <div className="card-item" key={index}>
                     {selectedServiceIndex === index && (
                         <Modal
                             setState={() => setSelectedServiceIndex(null)}
-                            projectsData={project} // Pass the correct project data
+                            servicesData={service} // Pass the correct service data
                         />
                     )}
-                    <Card onClick={() => togglePopover(index)} projectData={project} />
+                    <Card onClick={() => togglePopover(index)} serviceData={service} />
                 </div>
             ))}
         </div>
