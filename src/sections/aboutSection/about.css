@@ -1,0 +1,20 @@
+.about {
+    border: 2px solid red;
+    position: relative;
+    z-index: 10;
+    height: 80dvh;
+    padding-inline: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about_image {
+    aspect-ratio: 16/9;
+    border: 1px solid blue;
+}
+
+.about_image img {
+    aspect-ratio: 16/9;
+}
+

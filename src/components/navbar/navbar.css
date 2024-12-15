@@ -121,6 +121,7 @@
   .nav-container {
     padding: 1rem 5%;
     position: relative;
+
   }
 
   .nav-logo {
@@ -140,9 +141,9 @@
     top: 100%;
     right: 0;
     width: 100%;
-    background-color: var(--color-bg-white);
+    background: var(--color-gradient-blue);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 1rem 0;
+    padding: 1rem 4rem;
     z-index: 10;
     max-width: 100%;
   }
@@ -159,6 +160,8 @@
   }
 
   .nav-container li {
+    border: 1px solid var(--color-bg-white);
+    border-radius: 20px;
     padding: 0.5rem 1rem;
     width: 100%;
     text-align: center;
@@ -183,7 +186,7 @@
     padding: 1rem 5%;
   }
   .nav-container li {
-    padding: 0rem 1rem;
+    padding: 0.25rem 1rem;
   }
   .nav-links {
     gap: 0.75rem;
