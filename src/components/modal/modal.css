@@ -1,0 +1,115 @@
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border to enhance the glass effect */
+  padding: 10px 10px 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Frosted glass for Safari */
+  border-radius: 10px; /* Rounded corners */
+  z-index: 1000;
+  width: 100vw;
+  height: 100dvh;
+  overflow: auto; /* Allows scrolling within the modal */
+}
+
+.modal {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5rem); /* Frosted glass effect */
+  width: 80%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column; /* Ensure content flows vertically */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+  padding: 2rem;
+}
+
+.modal-content p {
+  color: var(--color-darker-gray);
+  font-family: var(--font-base);
+  font-weight: normal;
+  font-size: 1.1rem;
+}
+
+.modal-text {
+  margin-inline: 6rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.modal-text > :first-child {
+  grid-column: 1 / -1; /* This makes the first child span all columns */
+  text-wrap: balance;
+  /* text-align: center; */
+}
+
+.modal-text article p span {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.modal-text h1 {
+  text-transform: capitalize;
+  font-family: var(--font-base);
+  text-align: center;
+}
+
+.modal-contact {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 700;
+  background-color: var(--color-btn-red);
+  margin: auto;
+  margin-top: 2rem;
+  width: 80%;
+  border-radius: 1.5rem;
+  transition: background-color 0.2s, box-shadow 0.2s; /* Smooth transition */
+}
+
+.modal-contact:hover {
+  background-color: var(
+    --color-btn-hover-red
+  ); /* Change to a different hover color */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow to create depth */
+}
+
+.modal-contact-btn {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: var(--color-white);
+  padding: 1rem 0rem;
+}
+
+@media screen and (max-width: 575px) {
+  .modal {
+    width: 90%;
+  }
+
+  .modal-content {
+    padding: 1rem 0.75rem;
+    /* padding-bottom: 5rem; possible fix for touchpad on mobile*/
+  }
+
+  .modal-text {
+    margin-inline: 0.75rem;
+    text-align: center;
+  }
+
+  .modal-content p {
+    font-weight: 300;
+    font-size: 1rem;
+  }
+}

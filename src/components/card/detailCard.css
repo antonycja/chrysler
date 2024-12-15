@@ -1,0 +1,15 @@
+.technologies, .key-feature {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.detail-card .feature{
+    color: var(--color-black);
+    /* text-align: center; */
+}
+
+.detail-card {
+    text-wrap: balance;
+}

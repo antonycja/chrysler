@@ -1,0 +1,106 @@
+.modal-top {
+  position: sticky;
+  top: 0;
+  left: 0; /* Align with the left edge of the modal */
+  width: 100%; /* Ensure it spans the full width of the modal */
+  background-color: white; /* Ensures it’s visible while scrolling */
+  padding: 1rem 2rem; /* Add padding for some space */
+  z-index: 10; /* Keep it above other content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for emphasis */
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+}
+
+.project-info p {
+  color: var(--color-gray);
+}
+
+.icons-side {
+  display: flex;
+  margin-top: 0.4rem;
+  gap: 1rem;
+}
+
+.modal-btn:hover {
+  cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  height: fit-content;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover {
+  cursor: pointer;
+}
+
+.tooltip:hover a {
+  color: #fff;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltiptext {
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.modal-link {
+  transition: transform 0.5s ease;
+}
+.modal-link:hover {
+  transform: scale(1.2);
+}
+
+.modal-close {
+  display: flex;
+  align-items: flex-start; /* Vertically center the SVG */
+  justify-content: center; /* Horizontally center the SVG (optional) */
+  height: auto; /* Ensure the div has height for proper centering */
+}
+
+.modal-close:hover {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 575px) {
+  .project-info h1 {
+    font-size: 1.25rem;
+  }
+
+  .project-info p {
+    font-size: 1rem;
+    text-wrap: auto;
+  }
+  .icons-side {
+    gap: 0.5rem;
+    height: min-content;
+  }
+  .modal-top {
+    padding: 0.5rem 1rem;
+  }
+}

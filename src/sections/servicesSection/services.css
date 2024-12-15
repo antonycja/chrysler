@@ -1,0 +1,18 @@
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  max-width: 1250px;
+  margin: 150px auto;
+  /* padding: 20px; */
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .card-list {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: 3rem auto;
+  }
+}
+
