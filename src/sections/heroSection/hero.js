@@ -2,26 +2,16 @@ import "./hero.css"
 import React from 'react';
 import Image from "next/image";
 import ImageSlider from "@/components/imageSlider/imageSlider";
-
-// Import images with proper Next.js optimization
-import Image1 from '/public/images/img1.jpg';
-import Image2 from '/public/images/img2.png';
-import Image3 from '/public/images/img3.jpg';
-import top from '/public/asserts/topLeft.png';
-import bottom from '/public/asserts/bottomRight.png';
+import Data from "@/constants/data";
 
 const HeroSection = () => {
-    const images = [
-        { src: Image1, alt: 'Image 1' },
-        { src: Image2, alt: 'Image 2' },
-        { src: Image3, alt: 'Image 3' },
-    ];
+    const { title, description, ctaButton, images, decorativeImages } = Data.hero;
 
     return (
         <section className="hero-section">
             <div className="top-left-img">
                 <Image
-                    src={top}
+                    src={decorativeImages.topLeft}
                     alt="top left decorative element"
                     priority
                     sizes="(max-width: 768px) 0px, 20vw"
@@ -29,22 +19,20 @@ const HeroSection = () => {
             </div>
             <div className="bottom-right-img">
                 <Image
-                    src={bottom}
+                    src={decorativeImages.bottomRight}
                     alt="bottom right decorative element"
                     priority
                     sizes="(max-width: 768px) 0px, 20vw"
                 />
             </div>
 
-            <h1 className="hero-title">BEST SOFTWARE SOLUTION COMPANY</h1>
+            <h1 className="hero-title">{title}</h1>
 
             <p className="hero-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
+                {description}
             </p>
 
-            <button className="hero-cta">Get Started</button>
+            <button className="hero-cta">{ctaButton}</button>
 
             <ImageSlider images={images}/>
         </section>

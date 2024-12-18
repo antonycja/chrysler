@@ -12,8 +12,14 @@
   align-items: normal;
 }
 
-.project-info p {
+.service-info p {
   color: var(--color-gray);
+}
+
+.service-info {
+  display: flex;
+  gap: 1rem;
+  width: 50%;
 }
 
 .icons-side {
@@ -88,11 +94,11 @@
 }
 
 @media screen and (max-width: 575px) {
-  .project-info h1 {
+  .service-info h1 {
     font-size: 1.25rem;
   }
 
-  .project-info p {
+  .service-info p {
     font-size: 1rem;
     text-wrap: auto;
   }

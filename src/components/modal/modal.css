@@ -15,6 +15,12 @@
   overflow: auto; /* Allows scrolling within the modal */
 }
 
+.key-feature {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 2rem; /* Optional: Add spacing between grid items */
+}
+
 .modal {
   position: relative;
   background-color: rgba(255, 255, 255, 0.95);

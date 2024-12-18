@@ -7,13 +7,18 @@
   outline: 2px solid transparent;
   overflow: hidden;
   transition: outline 0.5s ease;
-  min-height: 443px;
+  min-height: 350px;
   height: 100%;
   /* display: flex; */
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
 }
 
 .project-card .card-text {
-  padding: 0.5rem 2rem;
+  /*padding: 0.5rem 2rem;*/
   padding-bottom: 1.5rem;
 }
 .tag {
@@ -36,11 +41,11 @@
 }
 
 .project-card .card-image img {
-  width: 100%;
+  width: 4rem;
   height: auto;
-  aspect-ratio: 16/9;
+  /*aspect-ratio: 16/9;*/
   /* border-radius: 8px; */
-  object-fit: cover;
+  /*object-fit: cover;*/
 }
 
 .project-card .card-text h3 {
@@ -51,14 +56,14 @@
 .project-card .arrow {
   position: absolute;
   bottom: 1rem;
+  left: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotate(-35deg);
+  color: var(--color-light-blue);
   height: 40px;
   width: 40px;
-  color: var(--color-btn-red);
-  border: 1px solid var(--color-btn-red);
+  outline: 2px solid var(--color-light-blue);
   border-radius: 50%;
   margin-top: 1rem;
   transition: 0.2s ease;
@@ -72,11 +77,12 @@
 }
 
 .project-card:hover {
-  outline: 2px solid var(--color-btn-red);
+  outline: 2px solid var(--color-light-blue);
 }
 .project-card:hover .arrow {
-  background: var(--color-btn-red);
+  background: var(--color-gradient-blue);
   color: #fff;
+  outline: 1px solid transparent;
 }
 
 .tag:nth-child(6n + 1) {

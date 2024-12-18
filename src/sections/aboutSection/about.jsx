@@ -1,21 +1,21 @@
 import "./about.css"
 import Image from "next/image";
-import Image1 from '/public/images/img1.jpg';
+import data from '@/constants/data';
 
 export default function About() {
+    const { welcome, businessName, businessModel, businessSummary, businessImg } = data.about;
     return (<>
         <div className="about">
             <div className="about-text">
                 <div className="about-headings">
-                    <h4>welcome to</h4>
-                    <h1>business name here</h1>
-                    <h2>business model here</h2>
+                    <h4>{welcome}</h4>
+                    <h1>{businessName}</h1>
+                    <h2>{businessModel}</h2>
                 </div>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est qui, consequuntur officiis iure asperiores ex ab placeat itaque architecto molestiae dolor amet, saepe quidem quis numquam provident veniam corporis. Eligendi.</p>
-
+                <p>{businessSummary}</p>
             </div>
             <div className="about-image">
-                <Image src={Image1} alt="about image" loading={"lazy"} placeholder={"blur"} />
+                <Image src={businessImg} alt="about image" loading={"lazy"} placeholder={"blur"} />
             </div>
         </div>
     </>)

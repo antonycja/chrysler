@@ -1,30 +1,22 @@
 import "./modalNav.css"
 import { IoClose } from "react-icons/io5";
-import { HiOutlineExternalLink } from "react-icons/hi";
-import { FaGithub } from "react-icons/fa";
-
-
+import Image from 'next/image';
 
 export default function ModalNav({ data, setState }) {
     return (
         <div className="modal-top">
-            <div className="project-info">
-                <h1 className="project-name">{data.project_name}</h1>
-                <p className="project-type">{data.more.project_type}</p>
+            <div className="service-info">
+                <div className="service-icon">
+                    <Image
+                        src={data.icon}
+                        alt={`${data.serviceName} icon`}
+                        width={40}  // adjust these values as needed
+                        height={40} // adjust these values as needed
+                    />
+                </div>
+                <h1 className="service-name">{data.serviceName}</h1>
             </div>
             <div className="icons-side">
-                <a className="modal-btn tooltip" target="_blank" href={data.more.live.link}>
-                    <div className="modal-link">
-                        <HiOutlineExternalLink size={28} />
-                    </div>
-                    <span className="tooltiptext">{data.more.live.text}</span>
-                </a>
-                <a className="modal-btn tooltip" target="_blank" href={data.more.github.link}>
-                    <div className="modal-link">
-                        <FaGithub size={28} />
-                    </div>
-                    <span className="tooltiptext">{data.more.github.text}</span>
-                </a>
                 <div className="modal-btn tooltip" onClick={() => setState(false)}>
                     <div className="modal-link modal-close">
                         <IoClose size={28} />
@@ -33,6 +25,5 @@ export default function ModalNav({ data, setState }) {
                 </div>
             </div>
         </div>
-    )
-};
-
+    );
+}
