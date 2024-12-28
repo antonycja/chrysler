@@ -76,7 +76,7 @@
   text-align: center;
   font-size: 1.2em;
   font-weight: 700;
-  background-color: var(--color-btn-red);
+  background-color: var(--color-light-blue);
   margin: auto;
   margin-top: 2rem;
   width: 80%;
@@ -85,10 +85,8 @@
 }
 
 .modal-contact:hover {
-  background-color: var(
-    --color-btn-hover-red
-  ); /* Change to a different hover color */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow to create depth */
+  background: var(--color-gradient-blue);
+
 }
 
 .modal-contact-btn {

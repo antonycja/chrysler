@@ -13,3 +13,19 @@
 .detail-card {
     text-wrap: balance;
 }
+
+.feature-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.feature-skill {
+    border: 1px solid var(--color-light-blue);
+    padding: 0rem 0.65rem;
+    border-radius: 25px;
+}
+
+.feature-skills p {
+    font-size: .9rem;
+}
