@@ -21,14 +21,14 @@ const Data = {
         }
     },
     about: {welcome: "Welcome to",
-        businessName: "Business Name here",
-        businessModel: "business model here",
+        businessName: "Business Name",
+        businessModel: "making it happen",
         businessSummary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est qui, consequuntur officiis iure asperiores ex ab placeat itaque architecto molestiae dolor amet, saepe quidem quis numquam provident veniam corporis. Eligendi.", businessImg: Images.img1},
     services: {
-        heading1:"heading1",
+        heading1:"what can",
         businessName: "Business Name",
-        heading2:"heading2",
-        subheading:"subheading",
+        heading2:"offer you",
+        subheading:"quick, reliable and professional services",
         btnText:"modal button",
         services: [
             { icon:Images.server,

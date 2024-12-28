@@ -40,12 +40,23 @@
   text-transform: uppercase;
 }
 
+.about-headings h4 {
+  font-family: var(--font-manrope);
+  font-weight: 700;
+}
+
 .about-headings h1 {
   background: var(--color-gradient-blue);
   -webkit-background-clip: text;
   color: transparent;
   background-clip: text;
 }
+
+.about-headings h1, .about-headings h2 {
+  font-family: var(--font-rexton);
+  letter-spacing: -2px;
+}
+
 
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {

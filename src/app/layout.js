@@ -1,4 +1,4 @@
-import { Manrope } from "next/font/google";
+import { Manrope, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
@@ -7,6 +7,13 @@ const manrope = Manrope({
   subsets: ['latin'],
   variable: '--font-manrope',
   display: 'swap',
+})
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  variable: '--font-poppins',
+  display: 'swap',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
 })
 
 const rexton = localFont({
@@ -29,18 +36,18 @@ const rexton = localFont({
       style: 'normal',
     },
     {
-      path: './fonts/Rexton Black.otf',
-      weight: '800',
-      style: 'normal',
-    },
-    {
       path: './fonts/Rexton Bold.otf',
       weight: '700',
       style: 'normal',
     },
     {
-      path: './fonts/Rexton Extra Bold.otf',
+      path: './fonts/Rexton Black.otf',
       weight: '800',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Rexton Extra Bold.otf',
+      weight: '900',  // Changed from 800 to 900
       style: 'normal',
     },
   ],
@@ -65,7 +72,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${rexton.variable} ${manrope.variable}`}>
+      <body className={`${rexton.variable} ${manrope.variable} ${poppins.variable}`}>
         {/* <body> */}
         <Navbar />
         <main className="main-content">

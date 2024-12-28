@@ -26,7 +26,7 @@ export default function Services() {
 
     return (
         <>
-            <div className="services-hearder">
+            <div className="services-header">
                 <h1>{heading1}</h1>
                 <h1><span className="business-name"> {businessName} </span> {heading2}</h1>
                 <h4>{subheading}</h4>

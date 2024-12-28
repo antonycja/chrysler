@@ -9,7 +9,6 @@
   transition: outline 0.5s ease;
   min-height: 350px;
   height: 100%;
-  /* display: flex; */
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
@@ -19,6 +18,9 @@
 
 .project-card .card-text {
   /*padding: 0.5rem 2rem;*/
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   padding-bottom: 1.5rem;
 }
 .tag {
@@ -38,6 +40,13 @@
 .project-name {
   text-transform: capitalize;
   font-weight: bold;
+  font-family: var(--font-rexton);
+  letter-spacing: -2px;
+}
+
+.summary {
+  /* color: var(-- color-dark-grey); */
+  opacity: 0.8;
 }
 
 .project-card .card-image img {
