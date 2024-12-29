@@ -4,6 +4,7 @@ import Services from "@/sections/servicesSection/services";
 import Data from "@/constants/data";
 import Testimonials from "@/sections/testimonialSection/testimonials";
 import Clients from "@/sections/clientsSection/clients";
+import Footer from "@/sections/footerSection/footer";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <Services />
       <Testimonials />
       <Clients />
-      <h1>hello world from Home</h1>
+      <Footer />
     </>
   );
 }
