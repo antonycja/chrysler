@@ -1,0 +1,15 @@
+.clients-container {
+    padding-inline: 5%;
+    padding-top: 5%;
+    padding-bottom: 4rem;
+    background-color: var(--color-white);
+    text-align: center;
+    font-family: var(--font-rexton);
+    font-weight: 900;
+}
+
+.clients {
+    padding-top: 2rem;
+    gap: 2rem;
+    overflow: hidden;
+}
