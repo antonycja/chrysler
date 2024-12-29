@@ -1,5 +1,5 @@
 import { Images } from "./Images.js"
-
+ const date = new Date()
 const Data = {
     navbar: {
         logo: Images.logo,
@@ -196,6 +196,31 @@ const Data = {
             { img: Images.client3, alt: "client 3" },
             { img: Images.client4, alt: "client 4" },
         ]
+    },
+
+    footer: {
+        logo: Images.logo,
+        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem officia, reiciendis perferendis consequuntur enim debitis rerum sunt expedita a! Iure.",
+        menuTitle: "menu",
+        company: {
+            title: "company",
+            tel: "+27 76 123 4567",
+            email: "mail@mail.com",
+            address: "address"
+        },
+        connect: { 
+            title: "connect with us",
+            social: [
+                { icon: "", link: "" }, 
+                { icon: "", link: "" }, 
+                { icon: "", link: "" }
+            ],
+            newsletter: {
+                btnText: "Subscribe",
+                caption: "Your email address"
+            }
+         },
+         footerText: `Copyright ${date.getFullYear()} by companyName. All rights reserved.`
     }
 
 }

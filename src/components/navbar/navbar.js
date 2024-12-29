@@ -8,10 +8,8 @@ export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
-    // Handle scroll event to change navbar background
     useEffect(() => {
         const handleScroll = () => {
-            // Change state when user scrolls down more than 50 pixels
             if (window.scrollY > 200) {
                 setScrolled(true);
             } else {
@@ -19,17 +17,14 @@ export default function Navbar() {
             }
         };
 
-        // Add scroll event listener
         window.addEventListener('scroll', handleScroll);
 
-        // Prevent body scroll when menu is open
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'unset';
         }
 
-        // Cleanup event listeners
         return () => {
             window.removeEventListener('scroll', handleScroll);
             document.body.style.overflow = 'unset';
@@ -38,6 +33,26 @@ export default function Navbar() {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    }
+
+    const handleLinkClick = (link) => {
+        setIsMenuOpen(false);
+
+        // Convert the link text to match the ID format
+        const targetId = link.toLowerCase().replace(/\s+/g, '-');
+        console.log('Trying to scroll to:', targetId); // Debug log
+        const element = document.getElementById(targetId);
+
+        if (element) {
+            const headerOffset = 100;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     }
 
     return (
@@ -60,7 +75,7 @@ export default function Navbar() {
                     <li
                         className="link"
                         key={index}
-                        onClick={() => setIsMenuOpen(false)}
+                        onClick={() => handleLinkClick(link)}
                     >
                         {link}
                     </li>

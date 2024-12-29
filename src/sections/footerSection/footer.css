@@ -1,0 +1,46 @@
+footer {
+  text-align: center;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-inline: 10%;
+  padding-top: 5%;
+  padding-bottom: 0.5rem;
+  gap: 2rem;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.logo {
+  max-width: 25%;
+}
+
+.footer-menu {
+  min-height: 100%;
+  text-transform: uppercase;
+}
+.footer-box h4{
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-family: var(--font-rexton);
+    letter-spacing: -2px;
+    font-size: 1rem;
+  }
+.footer-links, .contact-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: .9rem;
+
+}
+
+.contact-details .label{
+    text-transform: capitalize;
+}

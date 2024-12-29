@@ -4,7 +4,7 @@ import data from '@/constants/data';
 
 export default function About() {
     const { welcome, businessName, businessModel, businessSummary, businessImg } = data.about;
-    return (<>
+    return (<section id="about-us">
         <div className="about">
             <div className="about-text">
                 <div className="about-headings">
@@ -18,5 +18,5 @@ export default function About() {
                 <Image src={businessImg} alt="about image" loading={"lazy"} placeholder={"blur"} />
             </div>
         </div>
-    </>)
+    </section>)
 }

@@ -33,32 +33,33 @@ const TestimonialCard = ({ text, author, rating }) => (
 
 export default function Testimonials() {
     return (
-        <div className="testimonials-container">
-            <div className="testimonials">
-                <div className="test-header">
-                    <h1>{testimonialData.title}</h1>
-                    <p>{testimonialData.text}</p>
+        <section id='testimonials'>
+            <div className="testimonials-container">
+                <div className="testimonials">
+                    <div className="test-header">
+                        <h1>{testimonialData.title}</h1>
+                        <p>{testimonialData.text}</p>
+                    </div>
+
+                    <div className="scroll-container">
+                        <Marquee
+                            pauseOnHover={true}
+                            pauseOnClick={true}
+                            speed={25}
+                            delay={2}
+                            style={{ overflowX: 'visible' }}
+                        >
+                            {/* Triple the testimonials for smoother infinite scroll */}
+                            {[...testimonialData.testimonials, ...testimonialData.testimonials, ...testimonialData.testimonials, ...testimonialData.testimonials].map((testimonial, idx) => (
+                                <TestimonialCard key={idx} {...testimonial} />
+                            ))}
+                        </Marquee>
+                    </div>
                 </div>
 
-                <div className="scroll-container">
-                    <Marquee
-                        pauseOnHover={true}
-                        pauseOnClick={true}
-                        speed={25}
-                        delay={2}
-                        style={{overflowX: 'visible'}}
-                    >
-                        {/* Triple the testimonials for smoother infinite scroll */}
-                        {[...testimonialData.testimonials, ...testimonialData.testimonials, ...testimonialData.testimonials, ...testimonialData.testimonials].map((testimonial, idx) => (
-                            <TestimonialCard key={idx} {...testimonial} />
-                        ))}
-                    </Marquee>
+                <div>
                 </div>
             </div>
-
-            <div>
-            </div>
-        </div>
-
+        </section>
     );
 }
