@@ -1,9 +1,28 @@
+"use client"
 import Image from "next/image"
 import "./footer.css"
 import Data from "@/constants/data"
 
 export default function Footer() {
     const footer = Data.footer
+
+    const handleLinkClick = (link) => {
+        // Convert the link text to match the ID format
+        const targetId = link.toLowerCase().replace(/\s+/g, '-');
+        const element = document.getElementById(targetId);
+
+        if (element) {
+            const headerOffset = 100;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
+
     return (<section id="company">
         <div className="footer-container">
             <div className="footer-box">
@@ -16,7 +35,14 @@ export default function Footer() {
                     <h4>{footer.menuTitle}</h4>
                     <div className="footer-links">
                         {Data.navbar.links.map((link, index) => (
-                            <a href={"#/" + link} className="footer-link">
+                            <a 
+                                key={index}
+                                onClick={() => handleLinkClick(link)} 
+                                className="footer-link"
+                                href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} // Add href for better accessibility
+                                role="button"
+                                style={{ cursor: 'pointer' }} // Add cursor pointer
+                            >
                                 {link}
                             </a>
                         ))}

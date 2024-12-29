@@ -119,8 +119,8 @@
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .nav-container {
-    padding: 1rem 5%;
-    position: relative;
+    padding: 2rem 5%;
+    /* position: relative; */
 
   }
 
@@ -183,7 +183,7 @@
 
 @media screen and (max-width: 480px) {
   .nav-container {
-    padding: 1rem 5%;
+    padding: 0.2rem 5%;
   }
   .nav-container li {
     padding: 0.25rem 1rem;

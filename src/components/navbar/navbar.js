@@ -36,7 +36,6 @@ export default function Navbar() {
     }
 
     const handleLinkClick = (link) => {
-        setIsMenuOpen(false);
 
         // Convert the link text to match the ID format
         const targetId = link.toLowerCase().replace(/\s+/g, '-');

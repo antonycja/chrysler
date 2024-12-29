@@ -51,6 +51,13 @@ a {
   text-decoration: none;
 }
 
-.link, .btn {
+.link,
+.btn {
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    padding-bottom: 3rem;
+  }
 }

@@ -1,15 +1,98 @@
 .clients-container {
-    padding-inline: 5%;
-    padding-top: 5%;
-    padding-bottom: 1rem;
-    background-color: var(--color-white);
-    text-align: center;
-    font-family: var(--font-rexton);
-    font-weight: 900;
+  padding-inline: 5%;
+  padding-top: 5%;
+  padding-bottom: 1rem;
+  background-color: var(--color-white);
+  text-align: center;
+  font-family: var(--font-rexton);
+  font-weight: 900;
+}
+
+/* Adjust heading size */
+.clients-container h1,
+.clients-container h2 {
+  font-size: 2rem; /* Default heading size */
+  margin-bottom: 1rem;
 }
 
 .clients {
-    padding-top: 1rem;
-    gap: 2rem;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.clients img {
+  width: 150px; /* Default image size */
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .clients-container {
+    padding-inline: 3%;
+    padding-top: 4%;
+  }
+
+  .clients-container h1,
+  .clients-container h2 {
+    font-size: 1.8rem; /* Medium screen heading size */
+  }
+
+  .clients img {
+    width: 120px !important; /* Medium screen image size */
+  }
+
+  .clients {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .clients-container {
+    padding-inline: 2%;
+    padding-top: 3%;
+  }
+
+  .clients-container h1,
+  .clients-container h2 {
+    font-size: 1.6rem; /* Small screen heading size */
+  }
+
+  .clients img {
+    width: 100px; /* Small screen image size */
+  }
+
+  .clients {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-container {
+    padding-inline: 1rem !important;
+    padding-top: 3rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .clients-container h1,
+  .clients-container h2 {
+    font-size: 1.4rem; /* Extra-small screen heading size */
+  }
+
+  .clients img {
+    width: 80px !important; /* Extra-small screen image size */
+    padding: 0 !important;
+  }
+
+  .client {
+    width: 100px !important;
+  }
+  .clients {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
