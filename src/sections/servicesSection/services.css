@@ -12,6 +12,13 @@
   font-weight: bold;
 }
 
+body.modal-open {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .services-header h4 {
   font-family: var(--font-manrope);
   font-weight: 700;
