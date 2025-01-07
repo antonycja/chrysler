@@ -1,5 +1,5 @@
 import { Images } from "./Images.js"
- const date = new Date()
+const date = new Date()
 const Data = {
     navbar: {
         logo: Images.logo,
@@ -7,8 +7,8 @@ const Data = {
         navBtn: "let's talk"
     },
     hero: {
-        title: "BEST SOFTWARE SOLUTION COMPANY",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        title: "COMPLETE IT SOLUTIONS FOR BUSINESS SUCCESS",
+        description: "E-Ovation is your complete IT partner - delivering enterprise-grade hardware, networking, and software solutions. We handle everything from server installations and data security to disaster recovery and custom software development, ensuring your business technology runs seamlessly.",
         ctaButton: "Get Started",
         images: [
             { src: Images.img1, alt: 'Image 1' },
@@ -22,146 +22,174 @@ const Data = {
     },
     about: {
         welcome: "Welcome to",
-        businessName: "Business Name",
-        businessModel: "making it happen",
-        businessSummary: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est qui, consequuntur officiis iure asperiores ex ab placeat itaque architecto molestiae dolor amet, saepe quidem quis numquam provident veniam corporis. Eligendi.", businessImg: Images.img1
+        businessName: "E-Ovation",
+        businessModel: "Your Partner in Making IT Happen",
+        businessSummary: "With over a decade of experience, E-Ovation delivers comprehensive IT solutions that drive business growth. Our expert team provides end-to-end technology services, from robust hardware infrastructure and networking to custom software development and cybersecurity. We pride ourselves on reliable, efficient, and personalized service that keeps your business running smoothly.",
+        businessImg: Images.img1
     },
     services: {
         heading1: "what can",
-        businessName: "Business Name",
+        businessName: "E-Ovation",
         heading2: "offer you",
-        subheading: "quick, reliable and professional services",
-        btnText: "modal button",
+        subheading: "Quick, Secure and Professional",
+        btnText: "Learn More",
         services: [
             {
                 icon: Images.server,
-                serviceName: "service name",
-                summary: "short summary",
+                serviceName: "Infrastructure & Networking",
+                summary: "Complete hardware and networking solutions for your business, delivering robust infrastructure setups that ensure maximum uptime and performance",
                 more: {
-                    images: [{ img: Images.img1, alt: "Image" }],
-                    serviceDescription: "long description",
+                    images: [{ img: Images.img1, alt: "Server and Network Infrastructure" }],
+                    serviceDescription: "Comprehensive IT infrastructure and networking solutions that provide the foundation for your business operations. From server installations to network management, we ensure your systems run efficiently and securely.",
                     features: [
                         {
-                            feature: "feature1",
-                            description: "feature1 description",
-                            skills: ["skill1", "skill2", "skill3", "skill4", "skill5", "skill6"],
+                            feature: "Server Solutions",
+                            description: "Enterprise-grade server setup, maintenance and management",
+                            skills: ["Server Installation", "Server Maintenance", "Performance Optimization", "Virtualization", "Storage Solutions", "Load Balancing"]
                         },
                         {
-                            feature: "feature2",
-                            description: "feature2 description",
-                            skills: ["skill1", "skill2", "skill3", "skill4", "skill5", "skill6"],
+                            feature: "Network Infrastructure",
+                            description: "Complete networking solutions for seamless connectivity",
+                            skills: ["Network Design", "Implementation", "WiFi Solutions", "Network Security", "Performance Monitoring", "Troubleshooting"]
                         },
                         {
-                            feature: "feature3",
-                            description: "feature3 description",
-                            skills: ["skill1", "skill2", "skill3", "skill4", "skill5", "skill6"],
-                        },
-                        {
-                            feature: "",
-                            description: "",
-                            skills: [""]
-                        },
-                        {
-                            feature: "",
-                            description: "",
-                            skills: [""]
-                        },
+                            feature: "Hardware Support",
+                            description: "Comprehensive hardware solutions and support services",
+                            skills: ["PC Support", "Laptop Support", "Hardware Upgrades", "Repairs", "Maintenance", "Equipment Supply"]
+                        }
                     ]
                 }
             },
             {
                 icon: Images.web,
-                serviceName: "",
-                summary: "",
+                serviceName: "Web & Cloud Solutions",
+                summary: "Modern web and cloud services for digital transformation, helping businesses leverage cutting-edge technology for enhanced operational efficiency",
                 more: {
-                    images: [{ img: Images.img1, alt: "Image" }],
-                    serviceDescription: "",
+                    images: [{ img: Images.img1, alt: "Web and Cloud Solutions" }],
+                    serviceDescription: "Cutting-edge web and cloud solutions that help your business leverage the power of modern technology. We provide comprehensive cloud services and web development to enhance your digital presence.",
                     features: [
                         {
-                            feature: "",
-                            description: "",
-                            skills: [""]
+                            feature: "Cloud Services",
+                            description: "Complete cloud infrastructure and migration solutions",
+                            skills: ["Cloud Migration", "Cloud Management", "AWS", "Azure", "Google Cloud", "Hybrid Cloud"]
                         },
                         {
-                            feature: "",
-                            description: "",
-                            skills: [""]
+                            feature: "Web Development",
+                            description: "Custom web solutions for your business needs",
+                            skills: ["Web Applications", "E-commerce", "CMS", "Web Hosting", "SSL Certificates", "Web Maintenance"]
                         },
                         {
-                            feature: "",
-                            description: "",
-                            skills: [""]
-                        },
-                        {
-                            feature: "",
-                            description: "",
-                            skills: [""]
-                        },
+                            feature: "Cloud Security",
+                            description: "Robust security measures for cloud infrastructure",
+                            skills: ["Data Protection", "Access Control", "Encryption", "Security Monitoring", "Compliance", "Backup Solutions"]
+                        }
                     ]
                 }
             },
             {
                 icon: Images.software,
-                serviceName: "",
-                summary: "",
+                serviceName: "Software Solutions",
+                summary: "Custom software development and enterprise applications that streamline your operations and drive business growth through tailored digital solutions",
                 more: {
-                    images: [{ img: Images.img1, alt: "Image" }],
-                    serviceDescription: "",
+                    images: [{ img: Images.img1, alt: "Software Development" }],
+                    serviceDescription: "Tailored software solutions that streamline your business processes and enhance operational efficiency. From custom development to software integration, we deliver solutions that meet your specific needs.",
                     features: [
                         {
-                            feature: "",
-                            description: "",
-                            skills: [""]
+                            feature: "Custom Development",
+                            description: "Bespoke software solutions for your business",
+                            skills: ["Application Development", "Database Design", "API Integration", "Mobile Apps", "Desktop Applications", "Testing"]
                         },
                         {
-                            feature: "",
-                            description: "",
-                            skills: [""]
+                            feature: "Enterprise Software",
+                            description: "Implementation and management of enterprise applications",
+                            skills: ["ERP Systems", "CRM Solutions", "Business Intelligence", "Workflow Automation", "Integration", "Support"]
                         },
                         {
-                            feature: "",
-                            description: "",
-                            skills: [""]
-                        },
-                        {
-                            feature: "",
-                            description: "",
-                            skills: [""]
-                        },
+                            feature: "Software Maintenance",
+                            description: "Ongoing support and updates for software systems",
+                            skills: ["Updates", "Bug Fixing", "Performance Optimization", "Security Patches", "Feature Enhancement", "Documentation"]
+                        }
                     ]
                 }
             },
             {
                 icon: Images.technical,
-                serviceName: "",
-                summary: "",
+                serviceName: "Technical Support",
+                summary: "Comprehensive IT support and maintenance services providing round-the-clock assistance to keep your business running smoothly and efficiently",
                 more: {
-                    images: [{ img: Images.img1, alt: "Image" }],
-                    serviceDescription: "",
+                    images: [{ img: Images.img1, alt: "Technical Support" }],
+                    serviceDescription: "Round-the-clock technical support services ensuring your business operations run smoothly. Our expert team provides fast, reliable assistance for all your IT needs.",
                     features: [
                         {
-                            feature: "",
-                            description: "",
-                            skills: [""]
+                            feature: "IT Support",
+                            description: "Professional IT support for all your technology needs",
+                            skills: ["Help Desk", "Remote Support", "On-site Support", "System Monitoring", "Problem Resolution", "User Training"]
                         },
                         {
-                            feature: "",
-                            description: "",
-                            skills: [""]
+                            feature: "Security Services",
+                            description: "Comprehensive security solutions for your business",
+                            skills: ["Antivirus", "Firewall", "Data Security", "Access Control", "Security Audits", "Threat Prevention"]
                         },
                         {
-                            feature: "",
-                            description: "",
-                            skills: [""]
-                        },
-                        {
-                            feature: "",
-                            description: "",
-                            skills: [""]
-                        },
+                            feature: "Disaster Recovery",
+                            description: "Robust backup and recovery solutions",
+                            skills: ["Data Backup", "Recovery Planning", "Business Continuity", "Risk Assessment", "Emergency Response", "Data Restoration"]
+                        }
                     ]
                 }
             },
+            {
+                icon: Images.internet,
+                serviceName: "Data Solutions",
+                summary: "Advanced data management and analytics solutions helping businesses make informed decisions through powerful insights and secure data handling",
+                more: {
+                    images: [{ img: Images.img1, alt: "Data Solutions" }],
+                    serviceDescription: "Comprehensive data management and analytics solutions that transform your business data into actionable insights. We help you harness the power of your data through advanced analytics and secure management systems.",
+                    features: [
+                        {
+                            feature: "Data Analytics",
+                            description: "Advanced analytics solutions for better business insights",
+                            skills: ["Business Intelligence", "Data Visualization", "Predictive Analytics", "Real-time Analytics", "Custom Reports", "Data Mining"]
+                        },
+                        {
+                            feature: "Data Management",
+                            description: "Comprehensive data management and storage solutions",
+                            skills: ["Database Management", "Data Warehousing", "Data Migration", "Data Integration", "Storage Optimization", "Data Governance"]
+                        },
+                        {
+                            feature: "Data Security",
+                            description: "Robust data protection and compliance solutions",
+                            skills: ["Data Encryption", "Access Control", "Compliance Management", "Data Backup", "Security Monitoring", "Privacy Protection"]
+                        }
+                    ]
+                }
+            },
+            {
+                icon: Images.tech,
+                serviceName: "Security & Compliance",
+                summary: "Enterprise-grade security solutions and compliance management ensuring your business assets are protected while meeting industry regulations",
+                more: {
+                    images: [{ img: Images.img1, alt: "Security & Compliance" }],
+                    serviceDescription: "Comprehensive security and compliance solutions that protect your business from evolving threats while ensuring regulatory compliance. Our expert team implements robust security measures tailored to your industry needs.",
+                    features: [
+                        {
+                            feature: "Cybersecurity",
+                            description: "Advanced security solutions for comprehensive protection",
+                            skills: ["Threat Detection", "Penetration Testing", "Security Audits", "Incident Response", "Security Training", "24/7 Monitoring"]
+                        },
+                        {
+                            feature: "Compliance Management",
+                            description: "Complete compliance and regulatory adherence solutions",
+                            skills: ["Risk Assessment", "Policy Development", "Compliance Audits", "GDPR Compliance", "Industry Standards", "Regular Updates"]
+                        },
+                        {
+                            feature: "Network Security",
+                            description: "Robust network protection and monitoring services",
+                            skills: ["Firewall Management", "VPN Solutions", "Intrusion Detection", "Email Security", "Web Filtering", "Access Control"]
+                        }
+                    ]
+                }
+            }
         ]
     },
     testimonials: {
@@ -208,19 +236,19 @@ const Data = {
             email: "mail@mail.com",
             address: "address"
         },
-        connect: { 
+        connect: {
             title: "connect with us",
             social: [
-                { icon: "", link: "" }, 
-                { icon: "", link: "" }, 
+                { icon: "", link: "" },
+                { icon: "", link: "" },
                 { icon: "", link: "" }
             ],
             newsletter: {
                 btnText: "Subscribe",
                 caption: "Your email address"
             }
-         },
-         footerText: `Copyright ${date.getFullYear()} by companyName. All rights reserved.`
+        },
+        footerText: `Copyright ${date.getFullYear()} by E-Ovation. All rights reserved.`
     }
 
 }

@@ -15,6 +15,8 @@ export default function Clients() {
                 pauseOnClick={true}
                 gradient={true}
                 gradientWidth={50}
+                direction="right"
+                s
             >
                 {[...clientData.clients, ...clientData.clients].map((client, idx) => (
                     <div 
