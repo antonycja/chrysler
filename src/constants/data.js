@@ -239,9 +239,9 @@ const Data = {
         connect: {
             title: "connect with us",
             social: [
-                { icon: "", link: "" },
-                { icon: "", link: "" },
-                { icon: "", link: "" }
+                {link: "https://www.youtube.com/Antonycja", label: "YouTube" },
+                {link: "https://github.com/antonycja", label: "GitHub" },
+                {link: "https://www.linkedin.com/in/antony-maposa/", label: "LinkedIn" }
             ],
             newsletter: {
                 btnText: "Subscribe",
@@ -252,5 +252,5 @@ const Data = {
     }
 
 }
-
+  
 export default Data;

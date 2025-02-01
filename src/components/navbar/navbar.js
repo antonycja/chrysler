@@ -39,7 +39,6 @@ export default function Navbar() {
 
         // Convert the link text to match the ID format
         const targetId = link.toLowerCase().replace(/\s+/g, '-');
-        console.log('Trying to scroll to:', targetId); // Debug log
         const element = document.getElementById(targetId);
 
         if (element) {
@@ -51,6 +50,8 @@ export default function Navbar() {
                 top: offsetPosition,
                 behavior: 'smooth'
             });
+
+            setIsMenuOpen(false);
         }
     }
 

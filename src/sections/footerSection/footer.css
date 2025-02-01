@@ -32,6 +32,22 @@ footer {
   text-transform: uppercase;
 }
 
+.social-icon {
+  scale: 0.8;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 1rem;
+}
+
+/* .socials {
+  display: flex;
+  flex-direction: column;
+} */
+
 .footer-box h4 {
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -80,6 +96,17 @@ footer {
   .connect {
     max-width: 100%;
     text-align: center;
+  }
+
+  .socials {
+    align-items: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social {
+    width: 60%;
   }
 
   .footer-box h4 {

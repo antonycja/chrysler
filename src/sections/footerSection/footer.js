@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image"
 import "./footer.css"
+import { SocialIcon } from "react-social-icons"
 import Data from "@/constants/data"
 
 export default function Footer() {
@@ -22,7 +23,7 @@ export default function Footer() {
             });
         }
     }
-
+ 
     return (<section id="company">
         <div className="footer-container">
             <div className="footer-box">
@@ -35,9 +36,9 @@ export default function Footer() {
                     <h4>{footer.menuTitle}</h4>
                     <div className="footer-links">
                         {Data.navbar.links.map((link, index) => (
-                            <a 
+                            <a
                                 key={index}
-                                onClick={() => handleLinkClick(link)} 
+                                onClick={() => handleLinkClick(link)}
                                 className="footer-link"
                                 href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} // Add href for better accessibility
                                 role="button"
@@ -68,7 +69,14 @@ export default function Footer() {
                 <div className="connect">
                     <h4>{footer.connect.title}</h4>
                     <div className="socials">
-                        
+                        {
+                            footer.connect.social.map((social, index) => (
+                                <div className="social" key={index}>
+                                    <SocialIcon className="social-icon" url={social.link} bgColor="blue" target="_blank" />
+                                    <p className="social-label">{social.label}</p>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>
