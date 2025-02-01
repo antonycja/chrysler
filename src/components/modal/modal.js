@@ -1,12 +1,18 @@
+"use client"
 import "./modal.css"
 import Carousel from "../Carousel/carousel";
 import ModalNav from "./modalNav";
 import DetailCard from "../card/detailCard";
+import ContactFormModal from "../contactModal/contact";
+import { useState } from "react";
+import Data from "@/constants/data";
 
 export default function Modal({ setState, servicesData, btnText }) {
+    const [isContactModalOpen, setIsContactModalOpen] = useState(false)
     const handleSectionClick = (e, sectionId) => {
         e.preventDefault();
-        setState(false);
+        setIsContactModalOpen(true);
+        // setState(false);
         // Get the target element
         const element = document.getElementById(sectionId);
         if (!element) return;
@@ -34,37 +40,45 @@ export default function Modal({ setState, servicesData, btnText }) {
     };
 
     return (
-        <div className="modal-container" onClick={() => setState(false)}>
-            <div className="modal" onClick={(e) => e.stopPropagation()}>
-                <ModalNav data={servicesData} setState={setState} />
-                <div className="modal-content">
-                    <Carousel images={servicesData.more.images} />
-                    <div className="modal-text">
-                        <div className="modal-summary-section">
-                            <article className="modal-summary">
-                                <p>{servicesData.more.serviceDescription}</p>
-                            </article>
-                        </div>
-
-                        <div className="key-features-section">
-                            <div className="key-feature-header">
-                                <h1>Key features</h1>
-                            </div>
-                            <div className="text-block">
-                                <article className="key-feature">
-                                    {servicesData.more.features.map((currFeature, index) => (
-                                        <DetailCard cardInfo={currFeature} id={index} key={index} />
-                                    ))}
+        <>
+            <div className="modal-container" onClick={() => setState(false)}>
+                <div className="modal" onClick={(e) => e.stopPropagation()}>
+                    <ModalNav data={servicesData} setState={setState} />
+                    <div className="modal-content">
+                        <Carousel images={servicesData.more.images} />
+                        <div className="modal-text">
+                            <div className="modal-summary-section">
+                                <article className="modal-summary">
+                                    <p>{servicesData.more.serviceDescription}</p>
                                 </article>
                             </div>
-                        </div>
 
-                    </div>
-                    <div className="modal-contact btn">
-                        <a onClick={(e) => handleSectionClick(e, "Contact")} className="modal-contact-btn">{btnText}</a>
+                            <div className="key-features-section">
+                                <div className="key-feature-header">
+                                    <h1>Key features</h1>
+                                </div>
+                                <div className="text-block">
+                                    <article className="key-feature">
+                                        {servicesData.more.features.map((currFeature, index) => (
+                                            <DetailCard cardInfo={currFeature} id={index} key={index} />
+                                        ))}
+                                    </article>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="modal-contact btn">
+                            <a onClick={(e) => handleSectionClick(e, "Contact")} className="modal-contact-btn">{btnText}</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+
+            <ContactFormModal
+                isOpen={isContactModalOpen}
+                onClose={() => setIsContactModalOpen(false)}
+                services={Data.services.services}
+            />
+
+        </>);
 }
