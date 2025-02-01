@@ -67,6 +67,9 @@ export default function Footer() {
                 </div>
                 <div className="connect">
                     <h4>{footer.connect.title}</h4>
+                    <div className="socials">
+                        
+                    </div>
                 </div>
             </div>
             <footer>

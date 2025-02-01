@@ -15,8 +15,8 @@ footer {
 .footer-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: start;
+  justify-content: space-evenly;
+  /* align-items: start; */
   gap: 2rem;
 }
 
@@ -29,7 +29,7 @@ footer {
 }
 
 .footer-menu {
-  flex: 1;
+  text-transform: uppercase;
 }
 
 .footer-box h4 {
@@ -53,9 +53,9 @@ footer {
   text-transform: capitalize;
 }
 
-.connect {
+/* .connect {
   flex: 1;
-}
+} */
 .company .label {
   color: var(--color-dark-grey);
   opacity: 0.9;
