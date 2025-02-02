@@ -3,6 +3,7 @@ import React from 'react';
 import Image from "next/image";
 import ImageSlider from "@/components/imageSlider/imageSlider";
 import Data from "@/constants/data";
+import HeroBtn from "@/components/heroBtn/heroBtn";
 
 const HeroSection = () => {
     const { title, description, ctaButton, images, decorativeImages } = Data.hero;
@@ -33,7 +34,7 @@ const HeroSection = () => {
                     {description}
                 </p>
 
-                <button className="hero-cta">{ctaButton}</button>
+                <HeroBtn text={ctaButton}/>
 
                 <ImageSlider images={images} />
             </div>
