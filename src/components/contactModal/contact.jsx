@@ -94,12 +94,16 @@ const ContactFormModal = ({ isOpen, onClose, services }) => {
         }
     };
 
-    const handleServiceToggle = (serviceId) => {
+    const handleServiceToggle = (serviceId, services) => {
         setFormData(prev => {
-            const services = prev.selectedServices.includes(serviceId)
-                ? prev.selectedServices.filter(id => id !== serviceId)
-                : [...prev.selectedServices, serviceId];
-            return { ...prev, selectedServices: services };
+            const service = services.find(s => s.id === serviceId);
+            const serviceName = service?.serviceName;
+
+            const updatedServices = prev.selectedServices.includes(serviceName)
+                ? prev.selectedServices.filter(name => name !== serviceName)
+                : [...prev.selectedServices, serviceName];
+
+            return { ...prev, selectedServices: updatedServices };
         });
     };
 
@@ -231,8 +235,8 @@ const ContactFormModal = ({ isOpen, onClose, services }) => {
                                     <input
                                         type="checkbox"
                                         id={`service-${service.id}`}
-                                        checked={formData.selectedServices.includes(service.id)}
-                                        onChange={() => handleServiceToggle(service.id)}
+                                        checked={formData.selectedServices.includes(service.serviceName)}
+                                        onChange={() => handleServiceToggle(service.id, services)}
                                     />
                                     <label htmlFor={`service-${service.id}`}>{service.serviceName}</label>
                                 </div>

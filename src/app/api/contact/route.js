@@ -18,14 +18,14 @@ export async function POST(req) {
         }
 
         const htmlBody = `
-        <div style="font-family: Arial, sans-serif; line-height: 1.5;">
-          <h2 style="color: #444;">New Contact Form Submission</h2>
+        <div style="font-family: Arial, sans-serif; line-height: 1.5; font-size:1rem">
+          <h2 style="color: #444;">Form Submission from E-Ovation Website</h2>
           <p><strong>Name:</strong> ${firstName} ${lastName}</p>
           <p><strong>Email:</strong> ${email}</p>
-          ${phone ? `<p><strong>Phone Number:</strong> ${phone}</p>` : ''}
-          ${companyName ? `<p><strong>Company Name:</strong> ${companyName}</p>` : ''}
+          ${phone ? `<p><strong>Phone Number:</strong> ${phone.split("-").join(" ")}</p>` : ''}
+          ${companyName ? `<p style="text-transform: capitalize;"><strong>Company Name:</strong> ${companyName}</p>` : ''}
           ${selectedServices
-                ? `<p><strong>Services:</strong> ${Array.isArray(selectedServices) ? selectedServices.join(', ') : selectedServices
+                ? `<p style="text-transform: capitalize;"><strong>Services:</strong> ${Array.isArray(selectedServices) ? selectedServices.join(',<br/>&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;') : selectedServices
                 }</p>`
                 : ''
             }
@@ -46,9 +46,10 @@ export async function POST(req) {
 
         // Set up email data
         const mailOptions = {
-            from: `"${firstName}" <${email}>`, // sender email
+            from: `"E-Ovation Website" <${process.env.EMAIL_SERVER_USER}`, // sender email
+            replyTo: email,
             to: process.env.CONTACT_EMAIL,
-            subject: subject,
+            subject: subject.replace(/^./, char => char.toUpperCase()),
             html: htmlBody,
         }
 
