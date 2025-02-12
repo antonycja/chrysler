@@ -245,15 +245,15 @@ const Data = {
         menuTitle: "menu",
         company: {
             title: "company",
-            tel: "+27 76 123 4567",
+            tel: "coming soon",
             email: "info@eovation.co.za",
             address: "64 Voortrekker Rd, Townsend Estate, Cape Town, 7460"
         },
         connect: {
             title: "connect with us",
             social: [
-                { link: "https://www.youtube.com/Antonycja", label: "YouTube" },
-                { link: "https://github.com/antonycja", label: "GitHub" },
+                { link: "https://www.x.com", label: "X (Twitter)" },
+                { link: "https://www.facebook.com", label: "Facebook" },
                 { link: "https://www.linkedin.com/in/antony-maposa/", label: "LinkedIn" }
             ],
             newsletter: {
