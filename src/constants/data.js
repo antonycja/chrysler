@@ -64,26 +64,26 @@ const Data = {
             {
                 id: "web-cloud-solutions",
                 icon: Images.web,
-                serviceName: "Web & Cloud Solutions",
-                summary: "Modern web and cloud services for digital transformation, helping businesses leverage cutting-edge technology for enhanced operational efficiency",
+                serviceName: "Cabling & Infrastructure Services",
+                summary: "Professional cabling and wiring solutions ensuring reliable, scalable, and high-performance network infrastructure for businesses.",
                 more: {
-                    images: [{ img: Images.img1, alt: "Web and Cloud Solutions" }],
-                    serviceDescription: "Cutting-edge web and cloud solutions that help your business leverage the power of modern technology. We provide comprehensive cloud services and web development to enhance your digital presence.",
+                    images: [{ img: Images.img1, alt: "Cabling & Infrastructure Services" }],
+                    serviceDescription: "Expert cabling and wiring services designed to enhance network reliability, manageability, and scalability. Whether you're constructing a new office, relocating, or upgrading, we have you covered.",
                     features: [
                         {
-                            feature: "Cloud Services",
-                            description: "Complete cloud infrastructure and migration solutions",
-                            skills: ["Cloud Migration", "Cloud Management", "AWS", "Azure", "Google Cloud", "Hybrid Cloud"]
+                            feature: "Network Cabling",
+                            description: "Comprehensive network cabling solutions including needs analysis and system design.",
+                            skills: ["LAN/WAN Setup", "Ethernet Cabling", "Fiber Optics", "Cable Management", "Network Optimization", "System Design"]
                         },
                         {
-                            feature: "Web Development",
-                            description: "Custom web solutions for your business needs",
-                            skills: ["Web Applications", "E-commerce", "CMS", "Web Hosting", "SSL Certificates", "Web Maintenance"]
+                            feature: "Data & Communications Cabling",
+                            description: "Structured data and VoIP cabling solutions for seamless business operations.",
+                            skills: ["VoIP Infrastructure", "Data Cable Installation", "Structured Cabling", "Wireless Access Points", "Telephone Cabling", "Signal Optimization"]
                         },
                         {
-                            feature: "Cloud Security",
-                            description: "Robust security measures for cloud infrastructure",
-                            skills: ["Data Protection", "Access Control", "Encryption", "Security Monitoring", "Compliance", "Backup Solutions"]
+                            feature: "Cable & Wiring Maintenance",
+                            description: "Diagnosis, repair, and management of network and infrastructure cabling.",
+                            skills: ["Cable Fault Diagnosis", "Repair & Maintenance", "Infrastructure Audits", "Performance Monitoring", "Scalability Planning", "Server Rack Management"]
                         }
                     ]
                 }
@@ -100,7 +100,7 @@ const Data = {
                         {
                             feature: "Custom Development",
                             description: "Bespoke software solutions for your business",
-                            skills: ["Application Development", "Database Design", "API Integration", "Mobile Apps", "Desktop Applications", "Testing"]
+                            skills: ["Application Development", "Database Design", "API Integration", "Mobile Apps", "Desktop Applications", "Testing", "Web Development", "Web Maintenance", "E-commerce"]
                         },
                         {
                             feature: "Enterprise Software",
@@ -143,32 +143,38 @@ const Data = {
                 }
             },
             {
-                id: "data-solutions",
+                id: "it-consultancy",
                 icon: Images.internet,
-                serviceName: "Data Solutions",
-                summary: "Advanced data management and analytics solutions helping businesses make informed decisions through powerful insights and secure data handling",
+                serviceName: "IT Consultancy & Implementation",
+                summary: "Expert IT solutions designed to optimize business operations through strategic planning, implementation, and maintenance of IT systems.",
                 more: {
-                    images: [{ img: Images.img1, alt: "Data Solutions" }],
-                    serviceDescription: "Comprehensive data management and analytics solutions that transform your business data into actionable insights. We help you harness the power of your data through advanced analytics and secure management systems.",
+                    images: [{ img: Images.img1, alt: "IT Consultancy & Implementation" }],
+                    serviceDescription: "Comprehensive IT consultancy services that enhance business performance through cutting-edge technology, efficient system integration, and expert advisory solutions.",
                     features: [
                         {
-                            feature: "Data Analytics",
-                            description: "Advanced analytics solutions for better business insights",
-                            skills: ["Business Intelligence", "Data Visualization", "Predictive Analytics", "Real-time Analytics", "Custom Reports", "Data Mining"]
+                            feature: "Internet Optimization",
+                            description: "Enhance your business internet performance with traffic prioritization and usage policies.",
+                            skills: ["Bandwidth Management", "Traffic Shaping", "Web Filtering", "Load Balancing", "Usage Auditing", "Network Monitoring"]
                         },
                         {
-                            feature: "Data Management",
-                            description: "Comprehensive data management and storage solutions",
-                            skills: ["Database Management", "Data Warehousing", "Data Migration", "Data Integration", "Storage Optimization", "Data Governance"]
+                            feature: "Migration & Upgrades",
+                            description: "Seamless server and software migrations to minimize downtime and improve performance.",
+                            skills: ["Server Upgrades", "Cloud Migration", "System Integration", "Disaster Recovery Planning", "Performance Optimization", "Risk Assessment"]
                         },
                         {
-                            feature: "Data Security",
-                            description: "Robust data protection and compliance solutions",
-                            skills: ["Data Encryption", "Access Control", "Compliance Management", "Data Backup", "Security Monitoring", "Privacy Protection"]
+                            feature: "IT Projects & Solutions",
+                            description: "Bespoke IT solutions designed to align with your business goals and technological needs.",
+                            skills: ["IT Infrastructure Design", "Business IT Strategy", "Software Implementation", "Technology Consulting", "Solution Architecture", "Project Management"]
+                        },
+                        {
+                            feature: "Network & Systems Auditing",
+                            description: "Comprehensive auditing services to identify areas of improvement in IT infrastructure.",
+                            skills: ["Network Security Auditing", "System Performance Analysis", "IT Compliance Checks", "Infrastructure Optimization", "Vulnerability Assessment", "IT Governance"]
                         }
                     ]
                 }
-            },
+            }
+            ,
             {
                 id: "security-compliance",
                 icon: Images.tech,
@@ -235,13 +241,13 @@ const Data = {
 
     footer: {
         logo: Images.logo,
-        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem officia, reiciendis perferendis consequuntur enim debitis rerum sunt expedita a! Iure.",
+        text: "At E-Ovation, we empower your business with innovative IT solutions and unparalleled support. Our expertise in infrastructure, networking, software development, and cybersecurity ensures that your technology is optimized for growth and reliability. Partner with us to navigate the digital landscape with confidence, knowing your IT needs are in expert hands.",
         menuTitle: "menu",
         company: {
             title: "company",
             tel: "+27 76 123 4567",
-            email: "mail@mail.com",
-            address: "address"
+            email: "info@eovation.co.za",
+            address: "64 Voortrekker Rd, Townsend Estate, Cape Town, 7460"
         },
         connect: {
             title: "connect with us",

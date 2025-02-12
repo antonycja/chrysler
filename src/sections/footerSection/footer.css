@@ -16,7 +16,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  /* align-items: start; */
+  align-items: first baseline;
   gap: 2rem;
 }
 
@@ -30,6 +30,16 @@ footer {
 
 .footer-menu {
   text-transform: uppercase;
+}
+
+.footer-link {
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: left;
 }
 
 .social-icon {
@@ -63,6 +73,14 @@ footer {
   justify-content: space-between;
   gap: 0.5rem;
   font-size: 0.9rem;
+}
+
+.contact-details a:hover {
+  color: rgb(56, 56, 219);
+}
+
+.footer-links {
+  gap: 1rem;
 }
 
 .contact-details .label {

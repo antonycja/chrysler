@@ -23,7 +23,9 @@ export default function Footer() {
             });
         }
     }
- 
+
+    const address = footer.company.address.split(",")[0].split(" ").join("+") + footer.company.address.split(",")[1].split(" ").join(",")
+
     return (<section id="company">
         <div className="footer-container">
             <div className="footer-box">
@@ -36,16 +38,14 @@ export default function Footer() {
                     <h4>{footer.menuTitle}</h4>
                     <div className="footer-links">
                         {Data.navbar.links.map((link, index) => (
-                            <a
+                            <button
                                 key={index}
                                 onClick={() => handleLinkClick(link)}
                                 className="footer-link"
-                                href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} // Add href for better accessibility
                                 role="button"
-                                style={{ cursor: 'pointer' }} // Add cursor pointer
                             >
                                 {link}
-                            </a>
+                            </button>
                         ))}
                     </div>
                 </div>
@@ -54,7 +54,7 @@ export default function Footer() {
                     <div className="contact-details">
                         <div className="detail">
                             <p className="label">tel</p>
-                            <p>{footer.company.tel}</p>
+                            <a href={`tel:${footer.company.tel.split(" ").join("")}`}>{footer.company.tel}</a>
                         </div>
                         <div className="detail">
                             <p className="label">email</p>
@@ -62,7 +62,7 @@ export default function Footer() {
                         </div>
                         <div className="detail">
                             <p className="label">address</p>
-                            <p>{footer.company.address}</p>
+                            <a href={`https://www.google.com/maps?q=${address}`} target="_blank" rel="noopener noreferrer">{footer.company.address}</a>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@ export default function Footer() {
                 </div>
             </div>
             <footer>
-                {footer.footerText} <span>Designed and Coded by codeAnt Devs. &#x2615;</span>
+                {footer.footerText} <span>Designed and Coded by <a target="_blank" href="https://antonymap.netlify.app/" style={{color:"blue"}}>codeAnt Devs</a>. &#x2615;</span>
             </footer>
         </div>
     </section>)

@@ -5,25 +5,25 @@ import './contact.css';
 // Phone validation helper function remains the same
 const isValidPhoneNumber = (phone) => {
     const cleaned = phone.replace(/(?!^\+)[^\d]/g, '');
-    
+
     if (phone === '') return true;
-    
+
     if (cleaned.startsWith('+')) {
         const digits = cleaned.slice(1);
         if (digits.length < 10 || digits.length > 15) return false;
     } else {
         if (cleaned.length < 10 || cleaned.length > 15) return false;
     }
-    
+
     if (/^(?:\+)?(\d)\1{3,}/.test(cleaned)) return false;
-    
+
     return true;
 };
 
 const formatPhoneNumber = (phone) => {
     const hasPlus = phone.startsWith('+');
     const digits = phone.replace(/[^\d]/g, '');
-    
+
     if (hasPlus) {
         const groups = digits.match(/.{1,3}/g) || [];
         return '+' + groups.join('-');
@@ -47,17 +47,18 @@ const initialFormState = {
 const ContactFormModal = ({ isOpen, onClose, services }) => {
     const [formData, setFormData] = useState(initialFormState);
     const [errors, setErrors] = useState({});
+    const [responseMessage, setResponseMessage] = useState('');
 
     useEffect(() => {
         if (isOpen) {
             // Store current scroll position
             const scrollY = window.scrollY;
-            
+
             // Add styles to prevent scrolling and maintain position
             document.body.style.position = 'fixed';
             document.body.style.top = `-${scrollY}px`;
             document.body.style.width = '100%';
-            
+
             return () => {
                 // Restore scrolling and position when modal closes
                 document.body.style.position = '';
@@ -68,20 +69,19 @@ const ContactFormModal = ({ isOpen, onClose, services }) => {
         }
     }, [isOpen]);
 
-    // Rest of the component logic remains the same
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        
+
         if (name === 'phone') {
-            const formattedPhone = value.startsWith('+') 
+            const formattedPhone = value.startsWith('+')
                 ? '+' + value.slice(1).replace(/[^\d]/g, '')
                 : formatPhoneNumber(value);
-                
+
             setFormData(prev => ({
                 ...prev,
                 [name]: formattedPhone
             }));
-            
+
             setErrors(prev => ({
                 ...prev,
                 phone: ''
@@ -105,23 +105,41 @@ const ContactFormModal = ({ isOpen, onClose, services }) => {
 
     const validateForm = () => {
         const newErrors = {};
-        
+
         if (formData.phone && !isValidPhoneNumber(formData.phone)) {
             newErrors.phone = 'Please enter a valid phone number';
         }
-        
+
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         if (validateForm()) {
-            console.log('Form submitted:', formData);
-            setFormData(initialFormState);
-            setErrors({});
-            onClose();
+            try {
+                const res = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData),
+                })
+
+                const data = await res.json();
+
+                if (data.success) {
+                    setResponseMessage("Your message was sent successfully!")
+                    setFormData(initialFormState)
+                } else {
+                    setResponseMessage(`Error: ${data.error}`);
+                }
+
+            }
+            catch (error) {
+                console.log(error)
+                setResponseMessage("An error occurred while sending your message.")
+            }
+
         }
     };
 
@@ -235,6 +253,7 @@ const ContactFormModal = ({ isOpen, onClose, services }) => {
                     </div>
 
                     <button type="submit" className="submit-button">Send Message</button>
+                    {responseMessage && <p>{responseMessage}</p>}
                 </form>
             </div>
         </div>
